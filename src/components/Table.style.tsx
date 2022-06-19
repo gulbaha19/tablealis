@@ -8,12 +8,12 @@ export const Thead = styled("thead")`
 `;
 export const FirstColumn = styled("div")`
   width: 48px;
-
+  justify-content: center;
   height: 56px;
   align-items: center;
   font-size: 14px;
   line-height: 22px;
-  padding: 17px 16px;
+  /* padding: 17px 16px; */
   display: flex;
   font-weight: 500;
   position: relative;
