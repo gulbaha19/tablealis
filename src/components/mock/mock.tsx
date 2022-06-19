@@ -21,7 +21,7 @@ export const tableData = [
         date: 1669509869,
         comment:
           "Здравствуйте! Причина отказа договора № 123567 это неправильно заполненные данные. Измените эти данные и переотправьте на утверждение",
-        isRead: true,
+        isRead: false,
         status: TableStatus.CANCELED,
       },
     ],

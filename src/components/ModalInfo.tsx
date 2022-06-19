@@ -78,7 +78,8 @@ export const ModalInfo = ({ ...props }) => {
         {com.map((i: any, status: string) => (
           <>
             <div style={{ display: "flex", alignItems: "center", padding: "24px 0 8px 40px" }}>
-              <IconSmall type="Dot" />
+              {i.isRead ? <IconSmall type="Dot" /> : ""}
+
               <div
                 style={{
                   width: "24px",
