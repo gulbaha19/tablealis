@@ -97,3 +97,10 @@ export const StatusDiv = styled("div")<{ backgroundColor?: string; border: strin
   font-size: 12px;
   padding: 1px 8px;
 `;
+export const IconsUpDown = styled("div")`
+  display: flex;
+  flex-direction: column;
+  :hover {
+    opacity: 0.5;
+  }
+`;

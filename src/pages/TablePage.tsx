@@ -4,5 +4,9 @@ import { Table } from "../components/Table";
 import { TableStatus } from "../constants/TableType";
 
 export const TablePage = () => {
-  return <Table rows={tableData} />;
+  return (
+    <div style={{ width: "1312px", margin: "10px" }}>
+      <Table rows={tableData} />
+    </div>
+  );
 };

@@ -1,8 +1,15 @@
-import { ColumnNumber, FirstColumn, DataColumn, CommentColumn, Thead } from "./Table.style";
+import {
+  ColumnNumber,
+  FirstColumn,
+  DataColumn,
+  CommentColumn,
+  Thead,
+  IconsUpDown,
+} from "./Table.style";
 import { DataGrid } from "@mui/x-data-grid";
 import { Icon, IconAbsolute } from "./IconComponent/Icon";
 import { TableStatus } from "../constants/TableType";
-import { FC } from "react";
+import { FC, useState } from "react";
 import { TableBody } from "./TableBody";
 import { COLORS } from "../constants/colors";
 export type TableProps = {
@@ -11,13 +18,14 @@ export type TableProps = {
 export type RowType = {
   id: number;
   extraDoc?: extraDocProps[];
-  numberContract: string;
+  numberContract: number;
   startDate: number;
   finalDate: number;
   commentInfo?: CommentsProps[];
   status: TableStatus;
   proceed: string;
   download: string;
+  isRead: boolean;
 };
 
 export type CommentsProps = {
@@ -36,16 +44,30 @@ type extraDocProps = {
   status: TableStatus;
   proceed: string;
   download: string;
+  isRead: boolean;
 };
 
 export const Table: FC<TableProps> = ({ rows }) => {
+  const [data, setData] = useState(rows);
+  const [direction, setDitecrion] = useState(false);
+  const sortBy = (d: boolean) => {
+    setDitecrion(d);
+    const template = [...data];
+    if (d) {
+      template.sort((a, b) => a.numberContract - b.numberContract);
+    } else {
+      template.sort((a, b) => b.numberContract - a.numberContract);
+      console.log("second");
+    }
+    setData(template);
+  };
   return (
     <>
       <table
         style={{
           borderRadius: "10px",
           // border: "1px solid black",
-          margin: "20px",
+          // margin: "20px",
           padding: 0,
           borderCollapse: "collapse",
         }}>
@@ -58,16 +80,16 @@ export const Table: FC<TableProps> = ({ rows }) => {
           <Thead>
             <tr>
               <th style={{ borderTopLeftRadius: "10px" }}>
-                <FirstColumn></FirstColumn>
+                <FirstColumn />
               </th>
 
               <th>
                 <ColumnNumber style={{ justifyContent: "space-between" }}>
                   № договора
-                  <div style={{ display: "flex", flexDirection: "column" }}>
+                  <IconsUpDown onClick={() => sortBy(!direction)}>
                     <Icon type="IconUp" />
                     <Icon type="IconDown" />
-                  </div>
+                  </IconsUpDown>
                   <IconAbsolute type="Divider" />
                 </ColumnNumber>
               </th>
@@ -98,7 +120,7 @@ export const Table: FC<TableProps> = ({ rows }) => {
             </tr>
           </Thead>
           <tbody>
-            {rows.map((row) => (
+            {data.map((row) => (
               <TableBody {...row} key={row.id} />
             ))}
           </tbody>

@@ -30,6 +30,29 @@ const Box = styled(MUIBox)`
   box-shadow: "0px 3px 6px -4px rgba(0, 0, 0, 0.12), 0px 6px 16px rgba(0, 0, 0, 0.08), 0px 9px 28px 8px rgba(0, 0, 0, 0.05)";
   p: 4;
 `;
+const Top = styled("div")`
+  height: 24px;
+
+  padding: 16px 24px;
+
+  display: flex;
+`;
+const Close = styled("div")`
+  background: #dc1832;
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.043);
+  border-radius: 2px;
+  width: 89px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  :hover {
+    opacity: 0.5;
+  }
+`;
 
 export const ModalInfo = ({ ...props }) => {
   const { com, handleClose } = props;
@@ -45,19 +68,12 @@ export const ModalInfo = ({ ...props }) => {
   return (
     <>
       <Box>
-        <div
-          style={{
-            height: "24px",
-            boxShadow: "inset 0px -1px 0px #F0F0F0",
-            padding: " 16px 24px",
-            justifyContent: "space-between",
-            display: "flex",
-          }}>
+        <Top style={{ justifyContent: "space-between", boxShadow: "inset 0px -1px 0px #f0f0f0" }}>
           <span> Комментарии</span>
           <div onClick={handleClose}>
             <Icon type="Close" />
           </div>
-        </div>
+        </Top>
 
         {com.map((i: any, status: string) => (
           <>
@@ -91,7 +107,9 @@ export const ModalInfo = ({ ...props }) => {
             </div>
           </>
         ))}
-        <button>close</button>
+        <Top style={{ justifyContent: "right", boxShadow: "0px -1px 0px #f0f0f0" }}>
+          <Close onClick={handleClose}>Закрыть</Close>
+        </Top>
       </Box>
     </>
   );

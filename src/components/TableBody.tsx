@@ -3,23 +3,19 @@ import {
   FirstColumn,
   DataColumn,
   CommentColumn,
-  Thead,
   Button,
-  style,
   Div,
   StatusDiv,
 } from "./Table.style";
 import { Icon, IconAbsolute, IconSmall } from "./IconComponent/Icon";
 import { RowType } from "./Table";
-import { FC, MouseEvent, useState } from "react";
+import { FC, useState } from "react";
 import { TableStatus } from "../constants/TableType";
 import { BCKCOLORS, BORDERS, COLORS, ICONSTATUS } from "../constants/colors";
 import styled from "@emotion/styled";
-import { Box, Collapse, Modal, Table, TableCell, TableRow } from "@mui/material";
-import { click } from "@testing-library/user-event/dist/click";
-import { log } from "console";
-import { ModalInfo } from "./ModalInfo";
+import { Collapse, Modal } from "@mui/material";
 import moment from "moment";
+import { ModalInfo } from "./ModalInfo";
 
 export const statusColors: Record<TableStatus, string> = {
   [TableStatus.CANCELED]: COLORS.ORANGE,
@@ -111,10 +107,10 @@ export const TableBody: FC<RowType> = (row) => {
             <IconAbsolute type="Divider" />
 
             {row.commentInfo ? (
-              <div>
-                {/* {com.isRead ? <IconSmall type="Dot" /> : ""}{" "} */}
+              <div style={{ display: "flex", alignItems: "center" }}>
+                {row.isRead ? <IconSmall type="Dot" /> : ""}
                 <div onClick={handleOpen}>
-                  <Icon type="Message" style={{ marginRight: "8px" }} />
+                  <Icon type="Message" style={{ margin: " 0 8px" }} />
                   {row.commentInfo.length}
                 </div>
                 <Modal
@@ -133,7 +129,7 @@ export const TableBody: FC<RowType> = (row) => {
         <td>
           <ColumnStatus color={statusColors[row.status]}>
             <StatusDiv backgroundColor={bckColoros[row.status]} border={bckColoros[row.status]}>
-              <Icon type="Clock" style={{ marginRight: "8px" }} />
+              <Icon type={iconStatus[row.status]} style={{ marginRight: "8px" }} />
               {row.status}
             </StatusDiv>
             <IconAbsolute type="Divider" />
@@ -180,9 +176,10 @@ export const TableBody: FC<RowType> = (row) => {
                   <CommentColumn>
                     <IconAbsolute type="Divider" />
                     {doc.commentInfo ? (
-                      <div>
+                      <div style={{ display: "flex", alignItems: "center" }}>
+                        {doc.isRead ? <IconSmall type="Dot" /> : ""}
                         <div onClick={handleOpen}>
-                          <Icon type="Message" style={{ marginRight: "8px" }} />
+                          <Icon type="Message" style={{ margin: " 0 8px" }} />
                           {doc.commentInfo.length}
                         </div>
                         <Modal
@@ -200,8 +197,12 @@ export const TableBody: FC<RowType> = (row) => {
                 </td>
                 <td>
                   <ColumnStatus color={statusColors[doc.status]}>
-                    {/* <Icon type="{iconStatus[row.status]}" /> */}
-                    {doc.status}
+                    <StatusDiv
+                      backgroundColor={bckColoros[doc.status]}
+                      border={bckColoros[doc.status]}>
+                      <Icon type={iconStatus[doc.status]} />
+                      {doc.status}
+                    </StatusDiv>
                     <IconAbsolute type="Divider" />
                   </ColumnStatus>
                 </td>
