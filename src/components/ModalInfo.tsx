@@ -75,7 +75,7 @@ export const ModalInfo = ({ ...props }) => {
           </div>
         </Top>
 
-        {com.map((i: any, status: string) => (
+        {com.map((i: CommentsProps) => (
           <>
             <div style={{ display: "flex", alignItems: "center", padding: "24px 0 8px 40px" }}>
               {i.isRead ? <IconSmall type="Dot" /> : ""}

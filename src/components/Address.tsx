@@ -1,6 +1,5 @@
 import { FormControl, InputLabel, MenuItem, Select, TextField } from "@mui/material";
-import { padding } from "@mui/system";
-import { values } from "mobx";
+
 import { Controller, useFormContext } from "react-hook-form";
 import { inputStyle } from "../pages/FormPage";
 import { getFieldState } from "../utils/getFieldState";

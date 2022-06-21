@@ -35,7 +35,7 @@ export const borderColoros: Record<TableStatus, string> = {
   [TableStatus.PROCESSING]: BORDERS.BLUE,
   [TableStatus.DONE]: BORDERS.POLARGREEN,
 };
-export const iconStatus: Record<TableStatus, string> = {
+export const iconStatus: Record<TableStatus, ICONSTATUS> = {
   [TableStatus.CANCELED]: ICONSTATUS.CANCELED,
   [TableStatus.AFFIRM]: ICONSTATUS.CLOCK,
   [TableStatus.PROCESSING]: ICONSTATUS.INPROCESS,
