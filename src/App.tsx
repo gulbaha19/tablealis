@@ -8,7 +8,7 @@ import { TablePage } from "./pages/TablePage";
 
 function App() {
   return (
-    <Router basename="tablealis">
+    <Router basename="build">
       <div className="App">
         <Routes>
           <Route path="/" element={<Main />} />
