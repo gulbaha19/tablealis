@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/tablealis/static/css/main.e1555d13.css",
+    "main.js": "/tablealis/static/js/main.d7d3cb8d.js",
+    "static/js/787.0de91e8f.chunk.js": "/tablealis/static/js/787.0de91e8f.chunk.js",
+    "static/media/Message.svg": "/tablealis/static/media/Message.a30708b170f845a78bcc1195c69a7b78.svg",
+    "static/media/Profile.svg": "/tablealis/static/media/Profile.a865d747f4fda69414a3773e284a903a.svg",
+    "static/media/Canceled.svg": "/tablealis/static/media/Canceled.9af9ed39769743015b3f56b4d22a370d.svg",
+    "static/media/InProcess.svg": "/tablealis/static/media/InProcess.9af9ed39769743015b3f56b4d22a370d.svg",
+    "static/media/Done.svg": "/tablealis/static/media/Done.3c4a03be69c8877e4227632f644b9c69.svg",
+    "static/media/Close.svg": "/tablealis/static/media/Close.c3fe82d6f2bfc32e216c6ec2458408e0.svg",
+    "static/media/Clock.svg": "/tablealis/static/media/Clock.6d11f3954a659a07dbe684fe4684859e.svg",
+    "index.html": "/tablealis/index.html",
+    "static/media/Plus.svg": "/tablealis/static/media/Plus.0c82cbf58c92870db21154405242b887.svg",
+    "static/media/Minus.svg": "/tablealis/static/media/Minus.b700166213c72931716e9f09e19edc4a.svg",
+    "static/media/IconDown.svg": "/tablealis/static/media/IconDown.41d06f7d6ce3e93e326c3c929d9db7ac.svg",
+    "static/media/IconUp.svg": "/tablealis/static/media/IconUp.db00ecba6dd64e4b5f1f4163ef96ebad.svg",
+    "static/media/Divider.svg": "/tablealis/static/media/Divider.029b3c060c2a593e9ff3f18a4d8d445a.svg",
+    "static/media/Dot.svg": "/tablealis/static/media/Dot.40f2d3b0c6a76027d54dd5f5fe245d4d.svg",
+    "main.e1555d13.css.map": "/tablealis/static/css/main.e1555d13.css.map",
+    "main.d7d3cb8d.js.map": "/tablealis/static/js/main.d7d3cb8d.js.map",
+    "787.0de91e8f.chunk.js.map": "/tablealis/static/js/787.0de91e8f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e1555d13.css",
+    "static/js/main.d7d3cb8d.js"
+  ]
+}
