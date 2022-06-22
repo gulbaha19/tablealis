@@ -8,13 +8,13 @@ import { TablePage } from "./pages/TablePage";
 
 function App() {
   return (
-    <Router basename="tablealis">
+    <Router basename="/">
       <div className="App">
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="form" element={<FormPage />} />
-          <Route path="contract" element={<ContractPage />} />
-          <Route path="table" element={<TablePage />} />
+          <Route path="/form" element={<FormPage />} />
+          <Route path="/contract" element={<ContractPage />} />
+          <Route path="/table" element={<TablePage />} />
 
           <Route index element={<Navigate to="form" />}></Route>
         </Routes>
