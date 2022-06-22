@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, BrowserRouter as Router, Navigate } from "react-router-dom";
+import { Routes, Route, HashRouter as Router, Navigate } from "react-router-dom";
 import "./App.css";
 import { ContractPage } from "./pages/ContractPage";
 import { FormPage } from "./pages/FormPage";
