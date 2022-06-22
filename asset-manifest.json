@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tablealis/static/css/main.e1555d13.css",
-    "main.js": "/tablealis/static/js/main.e02ab702.js",
+    "main.js": "/tablealis/static/js/main.088d814b.js",
     "static/js/787.0de91e8f.chunk.js": "/tablealis/static/js/787.0de91e8f.chunk.js",
     "static/media/Message.svg": "/tablealis/static/media/Message.a30708b170f845a78bcc1195c69a7b78.svg",
     "static/media/Profile.svg": "/tablealis/static/media/Profile.a865d747f4fda69414a3773e284a903a.svg",
@@ -18,11 +18,11 @@
     "static/media/Divider.svg": "/tablealis/static/media/Divider.029b3c060c2a593e9ff3f18a4d8d445a.svg",
     "static/media/Dot.svg": "/tablealis/static/media/Dot.40f2d3b0c6a76027d54dd5f5fe245d4d.svg",
     "main.e1555d13.css.map": "/tablealis/static/css/main.e1555d13.css.map",
-    "main.e02ab702.js.map": "/tablealis/static/js/main.e02ab702.js.map",
+    "main.088d814b.js.map": "/tablealis/static/js/main.088d814b.js.map",
     "787.0de91e8f.chunk.js.map": "/tablealis/static/js/787.0de91e8f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e1555d13.css",
-    "static/js/main.e02ab702.js"
+    "static/js/main.088d814b.js"
   ]
 }
